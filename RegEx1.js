@@ -35,3 +35,14 @@ let result = unRegex.test(exampleStr);
 let quoteSample = "Beware of bugs in the above code.";
 let vowelRegex = /[aeiou]/gi; 
 let result = quoteSample.match(vowelRegex); 
+
+// 8. Match Letters of the Alphabet
+// Inside a character set, you can define a range of characters to match using a hyphen character: -.
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; 
+let result = quoteSample.match(alphabetRegex); 
+
+// 9. Match Numbers and Letters of the Alphabet
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/ig; 
+let result = quoteSample.match(myRegex);
