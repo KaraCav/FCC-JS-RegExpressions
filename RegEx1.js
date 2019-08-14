@@ -23,7 +23,7 @@ let twinkleStar = "Twinkle, twinkle, little star";
 let starRegex = /twinkle/gi; 
 let result = twinkleStar.match(starRegex);
 
-// 6. Match Anything with Wildcard Period
+// 6. Match Anything with Wildcard Period (.)
 let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /.un/; 
 let result = unRegex.test(exampleStr);
@@ -46,3 +46,24 @@ let result = quoteSample.match(alphabetRegex);
 let quoteSample = "Blueberry 3.141592653s are delicious.";
 let myRegex = /[h-s2-6]/ig; 
 let result = quoteSample.match(myRegex);
+
+// 10. Match Single Characters Not Specified
+// You can create a negated character set (that you don't want to match) by placing a ^ after the opening bracket
+let quoteSample = "3 blind mice.";
+let myRegex = /[^aeiou0-9]/gi;
+let result = quoteSample.match(myRegex);
+
+// 11. Match Characters that Occur One or More Times Using +
+let difficultSpelling = "Mississippi";
+let myRegex = /ss+/gi; 
+let result = difficultSpelling.match(myRegex);
+
+// 12. Match Characters that Occur Zero or More Times Using *
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+let chewieRegex = /Aa*/; // Change this line
+let result = chewieQuote.match(chewieRegex);
+
+// 13.  Find Characters with Lazy Matching Using ?
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/; 
+let result = text.match(myRegex);
