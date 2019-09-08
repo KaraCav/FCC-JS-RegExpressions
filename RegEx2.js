@@ -15,3 +15,12 @@ let caboose = "The last car on a train is the caboose";
 let lastRegex = /caboose$/; // returns true if last word is 'caboose'
 let result = lastRegex.test(caboose);
 
+// 17. Match All Letters and Numbers
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/gi;
+let result = quoteSample.match(alphabetRegexV2).length;
+
+// 18. Match Everything But Letters and Numbers
+let quoteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/gi; 
+let result = quoteSample.match(nonAlphabetRegex).length;
