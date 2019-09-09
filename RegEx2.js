@@ -24,3 +24,13 @@ let result = quoteSample.match(alphabetRegexV2).length;
 let quoteSample = "The five boxing wizards jump quickly.";
 let nonAlphabetRegex = /\W/gi; 
 let result = quoteSample.match(nonAlphabetRegex).length;
+
+//19. Match All Numbers
+let numString = "Your sandwich will be $5.00";
+let numRegex = /\d/g; 
+let result = numString.match(numRegex).length;
+
+// 20. Match All Non-Numbers
+let numString = "Your sandwich will be $5.00";
+let noNumRegex = /\D/g; 
+let result = numString.match(noNumRegex).length;
