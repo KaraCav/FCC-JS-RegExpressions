@@ -15,3 +15,13 @@ let result = sample.match(countWhiteSpace);
 let sample = "Whitespace is important in separating words";
 let countNonWhiteSpace = /\S/g; 
 let result = sample.match(countNonWhiteSpace);
+
+// 24. Specify Upper and Lower Number of Matches
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,5} /; // {lower #, upper # of matches}
+let result = ohRegex.test(ohStr); // true if Ohhh, Ohhhh, Ohhhhh
+
+// 25. Specify Only the Lower Number of Matches
+let haStr = "Hazzzzah";
+let haRegex = /z{4,}/; // Return only if has at LEAST 4 z's
+let result = haRegex.test(haStr);
