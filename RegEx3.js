@@ -25,3 +25,13 @@ let result = ohRegex.test(ohStr); // true if Ohhh, Ohhhh, Ohhhhh
 let haStr = "Hazzzzah";
 let haRegex = /z{4,}/; // Return only if has at LEAST 4 z's
 let result = haRegex.test(haStr);
+
+// 26. Specify Exact Number of Matches
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; // exactly 4 m's
+let result = timRegex.test(timStr);
+
+// 27. Check for All or None
+let favWord = "favorite";
+let favRegex = /favou?rite/; // will match with or without the "u"
+let result = favRegex.test(favWord);
