@@ -47,3 +47,14 @@ let result = pwRegex.test(sampleWord);
 let repeatNum = "42 42 42";
 let reRegex =  /^(\d+)\s\1\s\1$/;
 let result = reRegex.test(repeatNum);
+
+// 30. Use Capture Groups to Search and Replace
+let huhText = "This sandwich is good.";
+let fixRegex = /good/; 
+let replaceText = "okey-dokey"; 
+let result = huhText.replace(fixRegex, replaceText);
+
+// 31. Remove Whitespace from Start and End
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g;
+let result = hello.replace(wsRegex, '');
