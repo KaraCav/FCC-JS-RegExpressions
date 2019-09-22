@@ -35,3 +35,15 @@ let result = timRegex.test(timStr);
 let favWord = "favorite";
 let favRegex = /favou?rite/; // will match with or without the "u"
 let result = favRegex.test(favWord);
+
+// 28. Positive and Negative Lookahead: ?= and ?!
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{5,})(?=\D*\d{2,})/; 
+// ?= looks to see if there are 5 letters
+// the 2nd one checks for at least 2 #s
+let result = pwRegex.test(sampleWord);
+
+// 29. Reuse Patterns Using Capture Groups
+let repeatNum = "42 42 42";
+let reRegex =  /^(\d+)\s\1\s\1$/;
+let result = reRegex.test(repeatNum);
